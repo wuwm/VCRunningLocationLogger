@@ -8,24 +8,56 @@
 
 /* Begin PBXBuildFile section */
 		AB6F13652105738C00DE3464 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6F13642105738C00DE3464 /* AppDelegate.m */; };
-		AB6F13682105738C00DE3464 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6F13672105738C00DE3464 /* ViewController.m */; };
+		AB6F13682105738C00DE3464 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB6F13672105738C00DE3464 /* ViewController.mm */; };
 		AB6F136B2105738C00DE3464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6F13692105738C00DE3464 /* Main.storyboard */; };
 		AB6F136D2105738C00DE3464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB6F136C2105738C00DE3464 /* Assets.xcassets */; };
 		AB6F13702105738C00DE3464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB6F136E2105738C00DE3464 /* LaunchScreen.storyboard */; };
 		AB6F13732105738C00DE3464 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6F13722105738C00DE3464 /* main.m */; };
+		AB6F137B210573AE00DE3464 /* QMRunningLocationManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB6F137A210573AE00DE3464 /* QMRunningLocationManager.mm */; };
+		AB6F137E2105742300DE3464 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6F137D2105742300DE3464 /* CoreLocation.framework */; };
+		AB6F13852105793600DE3464 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = AB6F13842105793600DE3464 /* Podfile */; };
+		AB6F138721057FCA00DE3464 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6F138621057FCA00DE3464 /* MapKit.framework */; };
+		AB6F138A210586C000DE3464 /* QMRunningPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6F1389210586C000DE3464 /* QMRunningPoints.m */; };
+		AB6F13B12105CA2400DE3464 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6F13B02105CA2400DE3464 /* Accelerate.framework */; };
+		AB8EB0A32108208F0089C886 /* QMLocationPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB8EB09D2108208F0089C886 /* QMLocationPoint.cpp */; };
+		AB8EB0A42108208F0089C886 /* QMMatrixObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB8EB09F2108208F0089C886 /* QMMatrixObject.cpp */; };
+		AB8EB0A52108208F0089C886 /* QMKalmanFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB8EB0A12108208F0089C886 /* QMKalmanFilter.cpp */; };
+		AB8EB0A8210952870089C886 /* QMRunningPointZone.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8EB0A7210952870089C886 /* QMRunningPointZone.m */; };
+		AB8EB0C52109DE680089C886 /* QMRunningLocationConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8EB0C42109DE680089C886 /* QMRunningLocationConfiguration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36546455B7B2D6295B9735C8 /* Pods-VCRunningLocationLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRunningLocationLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VCRunningLocationLogger/Pods-VCRunningLocationLogger.debug.xcconfig"; sourceTree = "<group>"; };
+		38B82283710F7EF984EB4A64 /* Pods-VCRunningLocationLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VCRunningLocationLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-VCRunningLocationLogger/Pods-VCRunningLocationLogger.release.xcconfig"; sourceTree = "<group>"; };
+		417B7C9D7534F3E00B0190B3 /* libPods-VCRunningLocationLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VCRunningLocationLogger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6F13602105738B00DE3464 /* VCRunningLocationLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCRunningLocationLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6F13632105738C00DE3464 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB6F13642105738C00DE3464 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AB6F13662105738C00DE3464 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AB6F13672105738C00DE3464 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AB6F13672105738C00DE3464 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		AB6F136A2105738C00DE3464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB6F136C2105738C00DE3464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB6F136F2105738C00DE3464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB6F13712105738C00DE3464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB6F13722105738C00DE3464 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB6F1379210573AE00DE3464 /* QMRunningLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMRunningLocationManager.h; sourceTree = "<group>"; };
+		AB6F137A210573AE00DE3464 /* QMRunningLocationManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = QMRunningLocationManager.mm; sourceTree = "<group>"; };
+		AB6F137D2105742300DE3464 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AB6F13842105793600DE3464 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		AB6F138621057FCA00DE3464 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AB6F1388210586C000DE3464 /* QMRunningPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMRunningPoints.h; sourceTree = "<group>"; };
+		AB6F1389210586C000DE3464 /* QMRunningPoints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMRunningPoints.m; sourceTree = "<group>"; };
+		AB6F13B02105CA2400DE3464 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		AB8EB09D2108208F0089C886 /* QMLocationPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QMLocationPoint.cpp; sourceTree = "<group>"; };
+		AB8EB09E2108208F0089C886 /* QMLocationPoint.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QMLocationPoint.hpp; sourceTree = "<group>"; };
+		AB8EB09F2108208F0089C886 /* QMMatrixObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QMMatrixObject.cpp; sourceTree = "<group>"; };
+		AB8EB0A02108208F0089C886 /* QMMatrixObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QMMatrixObject.hpp; sourceTree = "<group>"; };
+		AB8EB0A12108208F0089C886 /* QMKalmanFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QMKalmanFilter.cpp; sourceTree = "<group>"; };
+		AB8EB0A22108208F0089C886 /* QMKalmanFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QMKalmanFilter.hpp; sourceTree = "<group>"; };
+		AB8EB0A6210952870089C886 /* QMRunningPointZone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMRunningPointZone.h; sourceTree = "<group>"; };
+		AB8EB0A7210952870089C886 /* QMRunningPointZone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMRunningPointZone.m; sourceTree = "<group>"; };
+		AB8EB0C32109DE680089C886 /* QMRunningLocationConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMRunningLocationConfiguration.h; sourceTree = "<group>"; };
+		AB8EB0C42109DE680089C886 /* QMRunningLocationConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMRunningLocationConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6F13B12105CA2400DE3464 /* Accelerate.framework in Frameworks */,
+				AB6F138721057FCA00DE3464 /* MapKit.framework in Frameworks */,
+				AB6F137E2105742300DE3464 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +77,13 @@
 		AB6F13572105738B00DE3464 = {
 			isa = PBXGroup;
 			children = (
+				AB8EB0C22109DDCC0089C886 /* QMRunningLocationLogger */,
+				AB8EB09C210820730089C886 /* QMKalmanFilter */,
+				AB6F13842105793600DE3464 /* Podfile */,
 				AB6F13622105738B00DE3464 /* VCRunningLocationLogger */,
 				AB6F13612105738B00DE3464 /* Products */,
+				AB6F137C2105742300DE3464 /* Frameworks */,
+				C46BF8DA27F0E70300A0E761 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,7 +101,7 @@
 				AB6F13632105738C00DE3464 /* AppDelegate.h */,
 				AB6F13642105738C00DE3464 /* AppDelegate.m */,
 				AB6F13662105738C00DE3464 /* ViewController.h */,
-				AB6F13672105738C00DE3464 /* ViewController.m */,
+				AB6F13672105738C00DE3464 /* ViewController.mm */,
 				AB6F13692105738C00DE3464 /* Main.storyboard */,
 				AB6F136C2105738C00DE3464 /* Assets.xcassets */,
 				AB6F136E2105738C00DE3464 /* LaunchScreen.storyboard */,
@@ -71,6 +111,54 @@
 			path = VCRunningLocationLogger;
 			sourceTree = "<group>";
 		};
+		AB6F137C2105742300DE3464 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F13B02105CA2400DE3464 /* Accelerate.framework */,
+				AB6F138621057FCA00DE3464 /* MapKit.framework */,
+				AB6F137D2105742300DE3464 /* CoreLocation.framework */,
+				417B7C9D7534F3E00B0190B3 /* libPods-VCRunningLocationLogger.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB8EB09C210820730089C886 /* QMKalmanFilter */ = {
+			isa = PBXGroup;
+			children = (
+				AB8EB0A12108208F0089C886 /* QMKalmanFilter.cpp */,
+				AB8EB0A22108208F0089C886 /* QMKalmanFilter.hpp */,
+				AB8EB09D2108208F0089C886 /* QMLocationPoint.cpp */,
+				AB8EB09E2108208F0089C886 /* QMLocationPoint.hpp */,
+				AB8EB09F2108208F0089C886 /* QMMatrixObject.cpp */,
+				AB8EB0A02108208F0089C886 /* QMMatrixObject.hpp */,
+			);
+			path = QMKalmanFilter;
+			sourceTree = "<group>";
+		};
+		AB8EB0C22109DDCC0089C886 /* QMRunningLocationLogger */ = {
+			isa = PBXGroup;
+			children = (
+				AB6F1379210573AE00DE3464 /* QMRunningLocationManager.h */,
+				AB6F137A210573AE00DE3464 /* QMRunningLocationManager.mm */,
+				AB8EB0A6210952870089C886 /* QMRunningPointZone.h */,
+				AB8EB0A7210952870089C886 /* QMRunningPointZone.m */,
+				AB6F1388210586C000DE3464 /* QMRunningPoints.h */,
+				AB6F1389210586C000DE3464 /* QMRunningPoints.m */,
+				AB8EB0C32109DE680089C886 /* QMRunningLocationConfiguration.h */,
+				AB8EB0C42109DE680089C886 /* QMRunningLocationConfiguration.m */,
+			);
+			path = QMRunningLocationLogger;
+			sourceTree = "<group>";
+		};
+		C46BF8DA27F0E70300A0E761 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36546455B7B2D6295B9735C8 /* Pods-VCRunningLocationLogger.debug.xcconfig */,
+				38B82283710F7EF984EB4A64 /* Pods-VCRunningLocationLogger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB6F13762105738C00DE3464 /* Build configuration list for PBXNativeTarget "VCRunningLocationLogger" */;
 			buildPhases = (
+				36E5D8AFF683BF0F4B701CF8 /* [CP] Check Pods Manifest.lock */,
 				AB6F135C2105738B00DE3464 /* Sources */,
 				AB6F135D2105738B00DE3464 /* Frameworks */,
 				AB6F135E2105738B00DE3464 /* Resources */,
@@ -102,6 +191,11 @@
 				TargetAttributes = {
 					AB6F135F2105738B00DE3464 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -130,20 +224,49 @@
 			files = (
 				AB6F13702105738C00DE3464 /* LaunchScreen.storyboard in Resources */,
 				AB6F136D2105738C00DE3464 /* Assets.xcassets in Resources */,
+				AB6F13852105793600DE3464 /* Podfile in Resources */,
 				AB6F136B2105738C00DE3464 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36E5D8AFF683BF0F4B701CF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VCRunningLocationLogger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB6F135C2105738B00DE3464 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB6F13682105738C00DE3464 /* ViewController.m in Sources */,
+				AB8EB0A8210952870089C886 /* QMRunningPointZone.m in Sources */,
+				AB8EB0A52108208F0089C886 /* QMKalmanFilter.cpp in Sources */,
+				AB6F13682105738C00DE3464 /* ViewController.mm in Sources */,
 				AB6F13732105738C00DE3464 /* main.m in Sources */,
 				AB6F13652105738C00DE3464 /* AppDelegate.m in Sources */,
+				AB6F137B210573AE00DE3464 /* QMRunningLocationManager.mm in Sources */,
+				AB8EB0A32108208F0089C886 /* QMLocationPoint.cpp in Sources */,
+				AB8EB0A42108208F0089C886 /* QMMatrixObject.cpp in Sources */,
+				AB8EB0C52109DE680089C886 /* QMRunningLocationConfiguration.m in Sources */,
+				AB6F138A210586C000DE3464 /* QMRunningPoints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,11 +404,14 @@
 		};
 		AB6F13772105738C00DE3464 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36546455B7B2D6295B9735C8 /* Pods-VCRunningLocationLogger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V539PAF2VE;
 				INFOPLIST_FILE = VCRunningLocationLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +424,14 @@
 		};
 		AB6F13782105738C00DE3464 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38B82283710F7EF984EB4A64 /* Pods-VCRunningLocationLogger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V539PAF2VE;
 				INFOPLIST_FILE = VCRunningLocationLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

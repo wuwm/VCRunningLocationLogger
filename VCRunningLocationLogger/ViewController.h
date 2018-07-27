@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController
+static double kPrecise = 1.0;
+@interface ViewController : UIViewController <MKMapViewDelegate>
 
 
 @end
