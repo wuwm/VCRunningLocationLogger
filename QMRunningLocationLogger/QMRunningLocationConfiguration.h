@@ -19,6 +19,9 @@
 @property (assign, nonatomic) BOOL   isPausesLocationUpdatesAutomatically;
 @property (assign, nonatomic) double allowedHorizontalAccuracy;
 @property (assign, nonatomic) double allowedZoneDistanceRatio;
+@property (assign, nonatomic) double allowedVerticalAccuracy;
+@property (assign, nonatomic) double allowedMaxGPSSpeed;
+@property (assign, nonatomic) double allowedMaxCalculatedSpeed;
 
 +(instancetype) defaultConfiguration;
 
@@ -29,6 +32,9 @@
                               andActivityType: (CLActivityType) activityType
                       andIsPauseAutomatically: (BOOL) isPauseAutomatically
                  andAllowedHorizontalAccuracy: (double) allowedHorizontalAccuracy
-                  andAllowedZoneDistanceRatio: (double) allowedZoneDistanceRatio;
+                  andAllowedZoneDistanceRatio: (double) allowedZoneDistanceRatio
+                   andAllowedVerticalAccuracy: (double) allowedVerticalAccuracy
+                           andAllowedMaxSpeed: (double) allowedMaxGPSSpeed
+                           andAllowedMaxSpeed: (double) allowedMaxCalculatedSpeed;
 
 @end

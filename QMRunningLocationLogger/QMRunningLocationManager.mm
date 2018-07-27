@@ -13,6 +13,8 @@
 
 @interface QMRunningLocationManager()
 
+@property (strong, nonatomic) QMRunningLocationConfiguration *configuration;
+
 /**
  C++中的 kalmanFilter指针
  */
@@ -46,7 +48,7 @@
 {
     if(self == [super init])
     {
-        [self configDefaultCLLocationManager];
+        
     }
     else
     {
@@ -57,30 +59,24 @@
 
 -(void) configDefaultCLLocationManager
 {
-    if(!self.locationManager)
-    {
-        self.locationManager = [[CLLocationManager alloc] init];
-        [self.locationManager requestAlwaysAuthorization];
-        self.locationManager.delegate = self;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-        self.locationManager.distanceFilter  = 5.0;
-        self.locationManager.allowsBackgroundLocationUpdates = YES;
-        self.locationManager.activityType = CLActivityTypeFitness;
-        self.locationManager.pausesLocationUpdatesAutomatically = NO;
-        self.realLocations      = [[NSMutableArray<CLLocation *> alloc] init];
-        self.optimizedLocations = [[NSMutableArray<CLLocation *> alloc] init];
-        self.realDistance       = 0.0;
-        self.optimizedDistance  = 0.0;
-        self.zone = [[QMRunningPointZone alloc] init];
-    }
-    else{
-//        NSLog(@"locationManager not init!!!");
-//        assert(0);
-    }
+    self.locationManager = [[CLLocationManager alloc] init];
+    [self.locationManager requestAlwaysAuthorization];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    self.locationManager.distanceFilter  = 5.0;
+    self.locationManager.allowsBackgroundLocationUpdates = YES;
+    self.locationManager.activityType = CLActivityTypeFitness;
+    self.locationManager.pausesLocationUpdatesAutomatically = NO;
+    self.realLocations      = [[NSMutableArray<CLLocation *> alloc] init];
+    self.optimizedLocations = [[NSMutableArray<CLLocation *> alloc] init];
+    self.realDistance       = 0.0;
+    self.optimizedDistance  = 0.0;
+    self.zone = [[QMRunningPointZone alloc] init];
 }
 
 -(void)configWithConfiguration:(QMRunningLocationConfiguration *)configuration
 {
+    self.configuration = configuration;
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.realLocations      = [[NSMutableArray<CLLocation *> alloc] init];
@@ -156,12 +152,29 @@
 -(BOOL) isValidLocationPoint:(CLLocation *)unfilteredLocation
 {
     
-    if(unfilteredLocation.horizontalAccuracy <= 40  &&
-       unfilteredLocation.verticalAccuracy <= 40    &&
-       unfilteredLocation.speed < 100               &&
-       unfilteredLocation.speed > 0                 )
+    if(unfilteredLocation.horizontalAccuracy <= self.configuration.allowedHorizontalAccuracy &&
+       unfilteredLocation.verticalAccuracy   <= self.configuration.allowedVerticalAccuracy   &&
+       unfilteredLocation.speed              <  self.configuration.allowedMaxGPSSpeed        &&
+       unfilteredLocation.speed > 0)
     {
-        return YES;
+        if(self.realLocations.count == 0)
+        {
+            return YES;
+        }
+        else
+        {
+            double calculatedSpeed = [unfilteredLocation distanceFromLocation: [self.realLocations lastObject]]
+                                        /
+                                    ([unfilteredLocation.timestamp timeIntervalSince1970] - [[self.realLocations lastObject].timestamp timeIntervalSince1970]);
+            if(calculatedSpeed < self.configuration.allowedMaxCalculatedSpeed)
+            {
+                return YES;
+            }
+            else
+            {
+                return NO;
+            }
+        }
     }
     else
     {

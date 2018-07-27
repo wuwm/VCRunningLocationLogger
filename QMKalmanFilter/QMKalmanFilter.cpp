@@ -135,10 +135,10 @@ QMLocationPoint* QMKalmanFilter::processState(QMLocationPoint *currentLocation)
     previousMeasureTime = newMeasureTime;
     previousLocation = currentLocation;
     
-    return &*(this->kalmanFilter());
+    return this->kalmanFilter();
 }
 
-std::unique_ptr<QMLocationPoint> QMKalmanFilter::kalmanFilter()
+QMLocationPoint* QMKalmanFilter::kalmanFilter()
 {
     std::unique_ptr<QMMatrixObject> xk = this->A->multiply(this->xk1);
     std::unique_ptr<QMMatrixObject> Pk = this->A->multiply(this->Pk1)->multiply(this->A->transpose())->plus(this->Qt);
@@ -163,8 +163,8 @@ std::unique_ptr<QMLocationPoint> QMKalmanFilter::kalmanFilter()
     double lon = this->xk1->matrix[2][0];
     double altitude = this->xk1->matrix[4][0];
     
-    std::unique_ptr<QMLocationPoint> kalmanLocationPoint = std::unique_ptr<QMLocationPoint> (new QMLocationPoint(lat, lon,previousMeasureTime, altitude));
-    return kalmanLocationPoint;
+    QMLocationPoint *newP = new QMLocationPoint(lat, lon,previousMeasureTime, altitude);
     
+    return newP;
 }
 

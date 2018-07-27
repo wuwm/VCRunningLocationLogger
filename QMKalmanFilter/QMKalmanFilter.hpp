@@ -52,7 +52,7 @@ private:
     QMMatrixObject *zt;
     QMLocationPoint *previousLocation;
     double previousMeasureTime;
-    std::unique_ptr<QMLocationPoint> kalmanFilter();
+    QMLocationPoint* kalmanFilter();
     void initKalman(QMLocationPoint *location);
     
 };

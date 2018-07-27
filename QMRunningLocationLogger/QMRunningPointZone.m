@@ -16,6 +16,10 @@
 @property (assign, nonatomic) CLLocationDistance avgLat;
 @property (assign, nonatomic) CLLocationDistance avgLon;
 @property (assign, nonatomic) CLLocationDistance avgAlti;
+@property (assign, nonatomic) NSUInteger maxZoneSize;
+@property (assign, nonatomic) NSUInteger outOfZoneCount;
+@property (assign, nonatomic) double zoneRatio;
+
 @end
 
 @implementation QMRunningPointZone
@@ -27,6 +31,23 @@
         self.pointsInZone = [[NSMutableArray alloc] init];
         self.avgLat       = 0;
         self.avgLon       = 0;
+        self.maxZoneSize  = 20;
+        self.zoneRatio    = 1.0;
+        self.outOfZoneCount = 0;
+    }
+    return self;
+}
+
+-(instancetype)initWithZoneSize: (NSUInteger)zoneSize andZoneRatio: (double)zoneRatio
+{
+    if (self == [super init])
+    {
+        self.pointsInZone = [[NSMutableArray alloc] init];
+        self.avgLat       = 0;
+        self.avgLon       = 0;
+        self.maxZoneSize  = zoneSize;
+        self.zoneRatio    = zoneRatio;
+        self.outOfZoneCount = 0;
     }
     return self;
 }
@@ -47,6 +68,10 @@
 {
     if([self shouldInZone:newPoint])
     {
+        if(self.pointsInZone.count > self.maxZoneSize)
+        {
+            [self.pointsInZone removeObjectAtIndex: 0];
+        }
         self.avgLat = (newPoint.coordinate.latitude + self.avgLat * self.pointsInZone.count) / (self.pointsInZone.count + 1);
         self.avgLon = (newPoint.coordinate.latitude + self.avgLon * self.pointsInZone.count) / (self.pointsInZone.count + 1);
         [self.pointsInZone addObject:newPoint];
@@ -62,13 +87,21 @@
     {
         return YES;
     }
-    if([self getHorizentalDistanceBetween:newPoint and: [self getAverageLocation]] < newPoint.horizontalAccuracy * 7)
+    if([self getHorizentalDistanceBetween:newPoint and: [self getAverageLocation]] < newPoint.horizontalAccuracy * self.zoneRatio)
     {
         return YES;
     }
     else
     {
-        return NO;
+        self.outOfZoneCount += 1;
+        if(self.outOfZoneCount > 3)
+        {
+            return NO;
+        }
+        else
+        {
+            return YES;
+        }
     }
 }
 

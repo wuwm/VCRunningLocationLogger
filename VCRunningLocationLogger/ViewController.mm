@@ -30,13 +30,10 @@
     _mapView.delegate = self;
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.coordinate = CLLocationCoordinate2DMake(51.49795, -0.174056);
-//    [_mapView addAnnotation:point];
-//    runningPoints.title = @"111";
-    _locationManager = [QMRunningLocationManager sharedInstance];
-    [_locationManager configDefaultCLLocationManager];
-//    [_locationManager configWithConfiguration:[QMRunningLocationConfiguration defaultConfiguration]];
-    _mapView.showsUserLocation = YES;
-    _count = 0;
+    self.locationManager = [QMRunningLocationManager sharedInstance];
+    [self.locationManager configWithConfiguration:[QMRunningLocationConfiguration defaultConfiguration]];
+    self.mapView.showsUserLocation = YES;
+    self.count = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didUpdateLocation:)
                                                  name:@"GetNewLocationPointNotification"
