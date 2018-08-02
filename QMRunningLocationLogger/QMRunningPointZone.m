@@ -8,7 +8,6 @@
 
 #import "QMRunningPointZone.h"
 #import <CoreLocation/CoreLocation.h>
-#import "ViewController.h"
 
 @interface QMRunningPointZone()
 

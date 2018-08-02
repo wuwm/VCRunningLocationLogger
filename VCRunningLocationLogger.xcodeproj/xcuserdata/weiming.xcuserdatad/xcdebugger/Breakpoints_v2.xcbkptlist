@@ -447,7 +447,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "211"
             endingLineNumber = "211"
-            landmarkName = "-processRunningPoint:"
+            landmarkName = "-isValidLocationPoint:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

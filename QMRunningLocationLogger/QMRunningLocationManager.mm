@@ -30,7 +30,6 @@
 
 @implementation QMRunningLocationManager
 
-
 +(QMRunningLocationManager *) sharedInstance
 {
     static QMRunningLocationManager *_instance = nil;
@@ -56,6 +55,23 @@
     }
     return self;
 }
+
++ (void)startRunning
+{
+    [[QMRunningLocationManager sharedInstance] startUpdatingLocation];
+}
+
++ (void)pauseRunning
+{
+    [[QMRunningLocationManager sharedInstance] pauseUpdatingLocation];
+}
+
++ (void)stopRunning
+{
+    [[QMRunningLocationManager sharedInstance] stopUpdatingLocation];
+}
+
+
 
 -(void) configDefaultCLLocationManager
 {
@@ -108,11 +124,24 @@
 }
 
 /**
+ 当跑步暂停的时候，调用这个函数。
+ */
+- (void)pauseUpdatingLocation
+{
+    [self.locationManager stopUpdatingLocation];
+}
+
+/**
  当跑步结束的时候，调用这个函数。
  */
 - (void)stopUpdatingLocation
 {
     [self.locationManager stopUpdatingLocation];
+    self.realDistance = 0.0;
+    self.optimizedDistance = 0.0;
+    self.zone = [[QMRunningPointZone alloc] init];
+    self.realLocations      = [[NSMutableArray<CLLocation *> alloc] init];
+    self.optimizedLocations = [[NSMutableArray<CLLocation *> alloc] init];
 }
 
 
@@ -197,7 +226,7 @@
                                                       [runningPoint.timestamp timeIntervalSince1970],
                                                       runningPoint.altitude);
     self.kalmanFilter = new QMKalmanFilter(startPoint);
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"GetNewLocationPointNotification" object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName: NSNotificationName(kGetNewLocationPointNotification) object:self];
 }
 
 

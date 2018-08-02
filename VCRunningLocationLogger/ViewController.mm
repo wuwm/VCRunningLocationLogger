@@ -36,7 +36,7 @@
     self.count = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didUpdateLocation:)
-                                                 name:@"GetNewLocationPointNotification"
+                                                 name:NSNotificationName(kGetNewLocationPointNotification)
                                                object:nil];
     // Do any additional setup after loading the view, typically from a nib.
 }

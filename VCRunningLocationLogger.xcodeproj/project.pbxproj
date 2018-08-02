@@ -77,7 +77,7 @@
 		AB6F13572105738B00DE3464 = {
 			isa = PBXGroup;
 			children = (
-				AB8EB0C22109DDCC0089C886 /* QMRunningLocationLogger */,
+				AB8EB0C22109DDCC0089C886 /* VCRunningLocationLogger */,
 				AB8EB09C210820730089C886 /* QMKalmanFilter */,
 				AB6F13842105793600DE3464 /* Podfile */,
 				AB6F13622105738B00DE3464 /* VCRunningLocationLogger */,
@@ -135,7 +135,7 @@
 			path = QMKalmanFilter;
 			sourceTree = "<group>";
 		};
-		AB8EB0C22109DDCC0089C886 /* QMRunningLocationLogger */ = {
+		AB8EB0C22109DDCC0089C886 /* VCRunningLocationLogger */ = {
 			isa = PBXGroup;
 			children = (
 				AB6F1379210573AE00DE3464 /* QMRunningLocationManager.h */,
@@ -147,6 +147,7 @@
 				AB8EB0C32109DE680089C886 /* QMRunningLocationConfiguration.h */,
 				AB8EB0C42109DE680089C886 /* QMRunningLocationConfiguration.m */,
 			);
+			name = VCRunningLocationLogger;
 			path = QMRunningLocationLogger;
 			sourceTree = "<group>";
 		};
@@ -410,8 +411,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V539PAF2VE;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VCRunningLocationLogger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -430,8 +432,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V539PAF2VE;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VCRunningLocationLogger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
