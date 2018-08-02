@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				AB8EB0C22109DDCC0089C886 /* VCRunningLocationLogger */,
-				AB8EB09C210820730089C886 /* QMKalmanFilter */,
+				AB8EB09C210820730089C886 /* VCKalmanFilter */,
 				AB6F13842105793600DE3464 /* Podfile */,
 				AB6F13622105738B00DE3464 /* VCRunningLocationLogger */,
 				AB6F13612105738B00DE3464 /* Products */,
@@ -122,7 +122,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AB8EB09C210820730089C886 /* QMKalmanFilter */ = {
+		AB8EB09C210820730089C886 /* VCKalmanFilter */ = {
 			isa = PBXGroup;
 			children = (
 				AB8EB0A12108208F0089C886 /* QMKalmanFilter.cpp */,
@@ -132,7 +132,7 @@
 				AB8EB09F2108208F0089C886 /* QMMatrixObject.cpp */,
 				AB8EB0A02108208F0089C886 /* QMMatrixObject.hpp */,
 			);
-			path = QMKalmanFilter;
+			path = VCKalmanFilter;
 			sourceTree = "<group>";
 		};
 		AB8EB0C22109DDCC0089C886 /* VCRunningLocationLogger */ = {

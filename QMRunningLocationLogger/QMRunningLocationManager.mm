@@ -16,7 +16,7 @@
 @property (strong, nonatomic) QMRunningLocationConfiguration *configuration;
 
 /**
- C++中的 kalmanFilter指针
+ C++: kalmanFilter pointer
  */
 @property (assign, nonatomic, nonnull) QMKalmanFilter *kalmanFilter;
 
@@ -114,26 +114,16 @@
     self.locationManager.pausesLocationUpdatesAutomatically = configuration.isPausesLocationUpdatesAutomatically;
 }
 
-
-/**
- 当跑步开始的时候，调用这个函数。
- */
 - (void)startUpdatingLocation
 {
     [self.locationManager startUpdatingLocation];
 }
 
-/**
- 当跑步暂停的时候，调用这个函数。
- */
 - (void)pauseUpdatingLocation
 {
     [self.locationManager stopUpdatingLocation];
 }
 
-/**
- 当跑步结束的时候，调用这个函数。
- */
 - (void)stopUpdatingLocation
 {
     [self.locationManager stopUpdatingLocation];
@@ -147,10 +137,10 @@
 
 #pragma CLLocation Delegate
 /**
- 每次更新地理位置之后会调用这个方法，方法调用的时候会给defaultCenter发送一个Notification，对应的ViewController需要Observe这个方法。
+ Delegate of CLLocationManager
 
- @param manager 系统的LocationManager
- @param locations 返回的坐标数组（一次返回一组坐标）
+ @param manager LocationManager
+ @param locations locations
  */
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
@@ -173,10 +163,10 @@
 
 
 /**
- 验证坐标点是否符合要求，只有符合要求的才会被收录。
+ Validate the location point.
 
- @param unfilteredLocation 原始的点
- @return 是否符合要求
+ @param unfilteredLocation
+ @return is valid point?
  */
 -(BOOL) isValidLocationPoint:(CLLocation *)unfilteredLocation
 {
@@ -212,9 +202,9 @@
 }
 
 /**
- 处理第一个获取到的坐标点
+ Process the first point.
 
- @param runningPoint 第一个获取到的坐标点
+ @param processed point
  */
 -(void) processFirstRunningPoint: (CLLocation *)runningPoint
 {
@@ -231,9 +221,9 @@
 
 
 /**
- 处理第二、第三、第四……个点
+ Process points other than the first point.
 
- @param runningPoint 获取到的坐标点
+ @param processed point
  */
 -(void) processRunningPoint: (CLLocation *)runningPoint
 {
