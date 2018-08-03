@@ -9,14 +9,14 @@
 
 在解决了部分偏移问题之后，为了Android的兼容，使用C++编写了卡尔曼滤波器（Kalman Filter），对路径点进一步优化。
 
-##使用方法
+## 使用方法
 
 
 QMRunningLocationManager.h 文件中有符合Xcode doc的文档注释，可以直接使用Option键查看。
 
 卡尔曼滤波器的C++头文件 QMKalmanFilter.h 文件中有卡尔曼滤波器的使用方法。主要的输入参数为：精度、纬度、高度、当前时间（用于计算速度）。
 
-##参数调整
+## 参数调整
 
 - 卡尔曼滤波器的参数 Sigma rValue
 
@@ -25,7 +25,7 @@ QMRunningLocationManager.h 文件中有符合Xcode doc的文档注释，可以�
 - QMLocationManagerConfiguration 中的参数，均有详细注释
 
 
-##演示
+## 演示
 
 
 
