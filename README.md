@@ -30,11 +30,11 @@ QMRunningLocationManager.h 文件中有符合Xcode doc的文档注释，可以�
 下面第一张图是我的算法，第二张是百度地图的结果，距离差在可接受范围之内，目前代码已经提交到trunk分支准备上线。
 
 <p align="center" >
-  <img src="Demo1.JPG" title="优化后" float=left>
+  <img src="Demo1.JPG" title="优化后" float=left height="330" width="495">
 </p>
 
 <p align="center" >
-  <img src="Demo2.PNG" title="百度地图的结果" float=left>
+  <img src="Demo2.PNG" title="百度地图的结果" float=right height="330" width="495">
 </p>
 
 
