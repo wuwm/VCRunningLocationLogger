@@ -34,7 +34,7 @@ QMRunningLocationManager.h 文件中有符合Xcode doc的文档注释，可以�
 </p>
 
 <p align="center" >
-  <img src="Demo2.PNG" title="百度地图的结果" float=right height="710" width="600">
+  <img src="Demo2.PNG" title="百度地图的结果" float=right height="600" width="710">
 </p>
 
 
